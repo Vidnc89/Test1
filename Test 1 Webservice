@@ -1,0 +1,24 @@
+Greet_Visitor ( ) 
+Webservice
+using System;
+using System.Collections.Generic;
+using System.Web;
+using System.Web.Services;
+
+[WebService(Namespace = "http://tempuri.org/")]
+[WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
+
+public class Service : System.Web.Services.WebService
+{
+    public Service () {
+
+        //Uncomment the following line if using designed components 
+        //InitializeComponent(); 
+    }
+
+    [WebMethod]
+    public string Greetings(string avatarAtDoor) {
+        return "Welcome " + avatarAtDoor + " Please enter the password in nearby chat.";
+    }
+    
+}
